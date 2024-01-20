@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+    <div class="card">
+        <h2>Translate kalimat tidak baku<br>Kelompok 11 Project translate kalimat baku
+        </h2>
+        <input type="text" id="wordInput" placeholder="Masukan kalimat tidak baku">
+        <button onclick="translateWord()">Translate</button>
+        <p id="translationOutput">Hasil</p>
+    </div>
+
+<script>
+// Dictionary object
+const dictionary = {
+  "lu": "kamu",
+  "gw": "saya",
+  "ijin": "izin",
+  "adzan":"azan",
+  "aktifitas":"aktivitas",
+  "atlit":"atlet",
+  "apotik":"apotek",
+  "bis":"bus",
+  "berfikir":"berpikir",
+  "cidera":"cedera",
+  "deterjen":"detergen",
+  "diagnosa":"diagnosis",
+  "ekstrim":"ekstrem",
+  "essai":"esai",
+  "familiar":"familier",
+  "filsof":"filsuf",
+  "fotocopy":"fotokopi",
+  "galery":"galeri",
+  "genius":"jenius",
+  "ghaib":"gaib",
+  "glamour":"glamor",
+  "goa":"gua",
+  "goncang":"guncang",
+  "grebek":"gerebek",
+  "hapal":"hafal",
+  "hipotesa":"hipotesis",
+  "akan saya periksa pekerjaan itu":"Saya akan memeriksa pekerjaan itu",
+  "ibu mau memasak rawon":"Ibu akan memasak rawon",
+  "karnaval itu membikin lalu-lintas macet":"Karnaval itu membuat lalu-lintas macet",
+  "kenapa kamu selalu terlambat?":"Mengapa kamu selalu terlambat?",
+  "ijasah Anita ditahan perusahaan":"Ijazah Anita ditahan perusahaan",
+  "kapal antar pulau itu segera berlabuh":"Kapal antarpulau itu segera berlabuh",
+  "usman mengikuti ekstra kulikuler":"Usman mengikuti ekstrakulikuler",
+  "aku pergi ke pasar beli sayur":"Saya pergi ke pasar untuk membeli sayur",
+  "dia datang ke rumah saya":"Ia datang ke rumah saya",
+  "kita harus belajar dengan giat":"Kita harus belajar dengan rajin",
+  "buku itu milik saya":"Buku itu adalah milik saya",
+  "ayahku bekerja di kantor":"Bapak saya bekerja di kantor",
+  "ibu memasak nasi goreng":"Mama memasak nasi goreng",
+  "aku makan nasi dan ayam":"Saya makan nasi dan ayam",
+  "dia tidak suka membaca buku":"Ia tidak suka membaca buku",
+  "kita harus membantu orang yang membutuhkan":"Kita harus menolong orang yang membutuhkan",
+  "jangan lupa mengerjakan tugasmu":"Jangan lupa menyelesaikan tugasmu",
+  "mobilnya warna merah":"Mobilnya berwarna merah",
+  "aku suka makan es krim":"Saya suka makan es krim",
+  "dia sedang belajar matematika":"Ia sedang mempelajari matematika",
+  "dia sedang menonton televisi":"Ia sedang menyaksikan televisi",
+  "aku senang bermain sepak bola":"Saya senang bermain sepak bola"
+
+  // Add more words and translations here
+};
+
+// Translate word function
+function translateWord() {
+  // Get word from input
+  const word = document.getElementById("wordInput").value.toLowerCase();
+
+  // Check if word is in dictionary
+  if (dictionary.hasOwnProperty(word)) {
+    // Output translation
+    document.getElementById("translationOutput").innerHTML = dictionary[word];
+  } else {
+    // Output not found message
+    document.getElementById("translationOutput").innerHTML = "Word not found in dictionary.";
+  }
+}
+</script>
+
+</body>
+</html>
